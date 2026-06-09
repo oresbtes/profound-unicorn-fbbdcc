@@ -1,14 +1,71 @@
-<h1>Pausa60</h1>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Pausa60</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<p>
-Tómate un momento.
-</p>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      font-family: Arial, sans-serif;
+      background-color: #f4f7fb;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
 
-<p>
-Respira profundo durante 60 segundos.
-</p>
+    .contenedor {
+      text-align: center;
+      padding: 30px;
+      max-width: 400px;
+    }
 
-<p>
-Esta app te ayuda a pausar,
-aclarar la mente y continuar con más enfoque.
-</p>
+    h1 {
+      font-size: 42px;
+      color: #2a8bf2;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 18px;
+      color: #555;
+      line-height: 1.5;
+      margin-bottom: 40px;
+    }
+
+    button {
+      font-size: 20px;
+      padding: 15px 30px;
+      background-color: #2a8bf2;
+      color: #ffffff;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    button:active {
+      transform: scale(0.98);
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="contenedor">
+    <h1>Pausa ahora.</h1>
+
+    <p>
+      Tómate 60 segundos para detenerte,<br>
+      respirar y continuar con claridad.
+    </p>
+
+    <button onclick="location.href='respira.html'">
+      Iniciar pausa
+    </button>
+  </div>
+
+</body>
+</html>
