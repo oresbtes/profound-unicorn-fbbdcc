@@ -4,143 +4,174 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>ProstaVive | Salud en USA</title>
-<meta name="description" content="Información clara sobre ProstaVive, sus ingredientes y dónde consultar precio y disponibilidad oficial.">
+<meta name="description" content="Conoce ProstaVive, sus ingredientes y visita el sitio oficial del fabricante.">
 
 <style>
-body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#f5faf7;color:#1f2933;line-height:1.6}
-.container{max-width:1100px;margin:auto;padding:25px}
-.hero{background:linear-gradient(135deg,#064e3b,#0B6E4F);color:white;padding:55px 20px}
-.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:35px;align-items:center}
-.badge{display:inline-block;background:#d1fae5;color:#065f46;padding:7px 14px;border-radius:30px;font-weight:bold;margin-bottom:15px}
-h1{font-size:46px;line-height:1.1;margin:0 0 15px}
-.hero p{font-size:20px}
-.btn{display:inline-block;background:#22c55e;color:white;padding:17px 30px;border-radius:10px;text-decoration:none;font-weight:bold;margin-top:18px;box-shadow:0 8px 18px rgba(0,0,0,.18)}
+*{box-sizing:border-box}
+body{margin:0;font-family:Inter,Arial,sans-serif;background:#f4faf7;color:#1f2933;line-height:1.6}
+.hero{min-height:100vh;background:linear-gradient(135deg,#062f24,#0B6E4F);color:white;display:flex;align-items:center;padding:40px 20px}
+.container{max-width:1150px;margin:auto;width:100%}
+.top{text-align:center;margin-bottom:35px;font-size:15px;opacity:.9}
+.hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:45px;align-items:center}
+.kicker{color:#b7f7d4;font-weight:bold;letter-spacing:1px;text-transform:uppercase}
+h1{font-size:64px;line-height:1;margin:10px 0}
+.subtitle{font-size:22px;max-width:560px}
+.stars{font-size:26px;color:#facc15;margin:18px 0}
+.btn{display:inline-block;background:#22c55e;color:white;padding:18px 34px;border-radius:12px;text-decoration:none;font-weight:800;font-size:18px;box-shadow:0 12px 28px rgba(0,0,0,.25);margin-top:18px}
 .btn:hover{background:#16a34a}
-.product-card{background:white;color:#064e3b;border-radius:22px;padding:35px;text-align:center;box-shadow:0 12px 35px rgba(0,0,0,.25)}
-.bottle{width:210px;height:310px;background:linear-gradient(160deg,#031b13,#0B6E4F);border-radius:28px;margin:auto;display:flex;align-items:center;justify-content:center;color:white;font-size:34px;font-weight:bold;box-shadow:0 14px 30px rgba(0,0,0,.35)}
-.stars{font-size:24px;color:#facc15;margin:15px 0}
-.card{background:white;border-radius:18px;padding:30px;margin:28px 0;box-shadow:0 5px 18px rgba(0,0,0,.08)}
-.card h2,.card h3{color:#0B6E4F;margin-top:0}
-.quick{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}
-.quick div{background:#eaf7f1;padding:18px;border-radius:14px;text-align:center}
-.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-.mini{background:#f8fafc;border:1px solid #e5e7eb;border-radius:14px;padding:20px}
-.split{display:grid;grid-template-columns:1fr 1fr;gap:25px;align-items:center}
-.image-box{background:linear-gradient(135deg,#d1fae5,#ffffff);border-radius:20px;padding:35px;text-align:center}
-.person{font-size:110px}
-.cta{background:#064e3b;color:white;text-align:center;border-radius:22px;padding:45px 25px;margin:35px 0}
-.cta h2{margin-top:0;color:white}
-.cta .btn{background:#22c55e;color:white}
-footer{text-align:center;color:#6b7280;font-size:13px;padding:30px}
+.note{font-size:14px;margin-top:10px;opacity:.9}
+.product-wrap{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.18);border-radius:30px;padding:45px;text-align:center;box-shadow:0 25px 60px rgba(0,0,0,.25)}
+.bottle{width:240px;height:360px;margin:auto;background:linear-gradient(160deg,#031b13,#0f7a58);border-radius:34px;display:flex;align-items:center;justify-content:center;color:white;font-size:40px;font-weight:900;box-shadow:0 22px 45px rgba(0,0,0,.45)}
+section{padding:55px 20px}
+.card{background:white;border-radius:24px;padding:34px;box-shadow:0 8px 25px rgba(0,0,0,.08);margin-bottom:28px}
+h2{color:#0B6E4F;font-size:34px;margin-top:0}
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.box{background:#eaf7f1;border-radius:18px;padding:22px;text-align:center}
+.box strong{color:#0B6E4F}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:center}
+.visual{background:linear-gradient(135deg,#d1fae5,#ffffff);border-radius:26px;text-align:center;padding:45px}
+.person{font-size:120px}
+.mini{background:#f8fafc;border:1px solid #e5e7eb;border-radius:18px;padding:22px}
+.cta{background:#062f24;color:white;text-align:center;border-radius:30px;padding:50px 25px}
+.cta h2{color:white}
+footer{text-align:center;font-size:13px;color:#667085;padding:35px 20px}
 ul{padding-left:22px}
 @media(max-width:850px){
+.hero{min-height:auto}
 .hero-grid,.split{grid-template-columns:1fr}
-.quick,.grid{grid-template-columns:1fr}
-h1{font-size:36px}
+.grid4,.grid3{grid-template-columns:1fr}
+h1{font-size:44px}
+.subtitle{font-size:19px}
 }
 </style>
 </head>
 
 <body>
 
-<section class="hero">
-  <div class="container hero-grid">
+<header class="hero">
+  <div class="container">
+    <div class="top">
+      <strong>Salud en USA</strong><br>
+      Información clara antes de tomar una decisión
+    </div>
+
+    <div class="hero-grid">
+      <div>
+        <div class="kicker">Guía actualizada 2026</div>
+        <h1>ProstaVive</h1>
+        <p class="subtitle">
+          Conoce qué es, qué ingredientes declara el fabricante y revisa la información oficial antes de comprar.
+        </p>
+        <div class="stars">★★★★★</div>
+        <a class="btn" href="https://8c3d8m-924w07pbktmag920r3c.hop.clickbank.net" target="_blank" rel="nofollow sponsored">Ver sitio oficial</a>
+        <p class="note">Consulta disponibilidad, precio actualizado y garantía directamente con el fabricante.</p>
+      </div>
+
+      <div class="product-wrap">
+        <div class="bottle">Prosta<br>Vive</div>
+        <p><strong>Suplemento alimenticio para hombres adultos</strong></p>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<section>
+  <div class="container card">
+    <h2>Lo más importante en 30 segundos</h2>
+    <div class="grid4">
+      <div class="box"><strong>Producto</strong><br>ProstaVive</div>
+      <div class="box"><strong>Tipo</strong><br>Suplemento</div>
+      <div class="box"><strong>Compra</strong><br>Sitio oficial</div>
+      <div class="box"><strong>Dirigido a</strong><br>Hombres adultos</div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container card split">
     <div>
-      <span class="badge">Revisión actualizada 2026</span>
-      <h1>ProstaVive</h1>
-      <p>Información clara y directa sobre ProstaVive, su fórmula y lo que debes revisar antes de visitar la página oficial.</p>
-      <div class="stars">★★★★★</div>
-      <p><strong>Para hombres adultos interesados en bienestar prostático, urinario y vitalidad masculina.</strong></p>
-      <a class="btn" href="https://8c3d8m-924w07pbktmag920r3c.hop.clickbank.net" target="_blank" rel="nofollow sponsored">Ver precio y disponibilidad</a>
+      <h2>¿Es ProstaVive para ti?</h2>
+      <ul>
+        <li>Buscas información clara antes de comprar.</li>
+        <li>Quieres conocer ingredientes y detalles oficiales.</li>
+        <li>Prefieres comprar solo desde el sitio oficial.</li>
+        <li>Quieres revisar precio, garantía y disponibilidad.</li>
+      </ul>
+      <a class="btn" href="https://8c3d8m-924w07pbktmag920r3c.hop.clickbank.net" target="_blank" rel="nofollow sponsored">Ver sitio oficial</a>
     </div>
-
-    <div class="product-card">
-      <div class="bottle">Prosta<br>Vive</div>
-      <h3>Advanced Formula</h3>
-      <p>Suplemento alimenticio para hombres adultos.</p>
+    <div class="visual">
+      <div class="person">👨‍🦳</div>
+      <h3>Bienestar masculino</h3>
+      <p>Una buena decisión comienza con información clara.</p>
     </div>
   </div>
 </section>
 
-<main class="container">
-
-<section class="card">
-  <h2>Lo más importante en 30 segundos</h2>
-  <div class="quick">
-    <div><strong>Producto</strong><br>ProstaVive</div>
-    <div><strong>Tipo</strong><br>Suplemento</div>
-    <div><strong>Compra</strong><br>Sitio oficial</div>
-    <div><strong>Uso</strong><br>Hombres adultos</div>
+<section>
+  <div class="container card">
+    <h2>¿Qué es ProstaVive?</h2>
+    <p>
+      ProstaVive es un suplemento alimenticio dirigido a hombres adultos. Según la información publicada por el fabricante, su fórmula combina extractos naturales, ingredientes herbales y micronutrientes relacionados con el bienestar masculino, prostático y urinario.
+    </p>
+    <p>
+      No es un medicamento ni reemplaza el consejo médico profesional.
+    </p>
   </div>
 </section>
 
-<section class="card split">
-  <div>
-    <h2>¿Es ProstaVive para ti?</h2>
+<section>
+  <div class="container card">
+    <h2>Ingredientes destacados</h2>
+    <div class="grid3">
+      <div class="mini"><h3>Tongkat Ali</h3><p>Usado en fórmulas de bienestar masculino.</p></div>
+      <div class="mini"><h3>Ashwagandha</h3><p>Planta común en suplementos de bienestar general.</p></div>
+      <div class="mini"><h3>Maca</h3><p>Raíz asociada tradicionalmente con vitalidad.</p></div>
+      <div class="mini"><h3>Ginseng</h3><p>Ingrediente frecuente en productos de energía y bienestar.</p></div>
+      <div class="mini"><h3>Zinc</h3><p>Mineral esencial para funciones generales del organismo.</p></div>
+      <div class="mini"><h3>Vitamina D</h3><p>Nutriente importante para múltiples procesos del cuerpo.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container card">
+    <h2>Antes de comprar, revisa esto</h2>
     <ul>
-      <li>Quieres conocer una fórmula enfocada en bienestar masculino.</li>
-      <li>Buscas información antes de comprar.</li>
-      <li>Prefieres revisar precio, garantía y disponibilidad oficial.</li>
-      <li>Quieres evitar páginas confusas o vendedores no oficiales.</li>
+      <li>Precio actualizado.</li>
+      <li>Disponibilidad oficial.</li>
+      <li>Garantía del fabricante.</li>
+      <li>Ingredientes completos.</li>
+      <li>Instrucciones de uso.</li>
     </ul>
-    <a class="btn" href="https://8c3d8m-924w07pbktmag920r3c.hop.clickbank.net" target="_blank" rel="nofollow sponsored">Consultar sitio oficial</a>
-  </div>
-  <div class="image-box">
-    <div class="person">👨‍🦳</div>
-    <h3>Bienestar masculino</h3>
-    <p>Información simple para tomar una decisión más segura.</p>
   </div>
 </section>
 
-<section class="card">
-  <h2>¿Qué es ProstaVive?</h2>
-  <p>ProstaVive es un suplemento alimenticio dirigido a hombres adultos. Según la información publicada por el fabricante, combina ingredientes naturales, extractos herbales y micronutrientes relacionados con el bienestar prostático, urinario y la vitalidad masculina.</p>
-  <p>No es un medicamento ni reemplaza el consejo de un profesional de la salud.</p>
-</section>
-
-<section class="card">
-  <h2>Ingredientes destacados</h2>
-  <div class="grid">
-    <div class="mini"><h3>Tongkat Ali</h3><p>Ingrediente usado en fórmulas de bienestar masculino.</p></div>
-    <div class="mini"><h3>Ashwagandha</h3><p>Planta frecuente en suplementos de bienestar general.</p></div>
-    <div class="mini"><h3>Maca</h3><p>Raíz asociada tradicionalmente con energía y vitalidad.</p></div>
-    <div class="mini"><h3>Ginseng</h3><p>Ingrediente popular en productos de bienestar y rendimiento.</p></div>
-    <div class="mini"><h3>Zinc</h3><p>Mineral esencial para múltiples funciones del organismo.</p></div>
-    <div class="mini"><h3>Vitamina D</h3><p>Nutriente importante para diversos procesos del cuerpo.</p></div>
+<section>
+  <div class="container cta">
+    <h2>Consulta la información oficial de ProstaVive</h2>
+    <p>Revisa disponibilidad, precio actualizado, garantía y detalles completos directamente en el sitio oficial.</p>
+    <a class="btn" href="https://8c3d8m-924w07pbktmag920r3c.hop.clickbank.net" target="_blank" rel="nofollow sponsored">Ver sitio oficial</a>
   </div>
 </section>
 
-<section class="card">
-  <h2>Antes de comprar, revisa esto</h2>
-  <ul>
-    <li>Precio actualizado.</li>
-    <li>Promociones disponibles.</li>
-    <li>Garantía del fabricante.</li>
-    <li>Ingredientes completos.</li>
-    <li>Instrucciones de uso.</li>
-  </ul>
-</section>
+<section>
+  <div class="container card">
+    <h2>Preguntas frecuentes</h2>
+    <h3>¿ProstaVive es medicamento?</h3>
+    <p>No. Es un suplemento alimenticio.</p>
 
-<section class="cta">
-  <h2>¿Quieres ver la información oficial de ProstaVive?</h2>
-  <p>Consulta precio, disponibilidad, garantía y detalles completos directamente en la página oficial.</p>
-  <a class="btn" href="https://8c3d8m-924w07pbktmag920r3c.hop.clickbank.net" target="_blank" rel="nofollow sponsored">Ver precio y disponibilidad</a>
-</section>
+    <h3>¿Dónde se compra?</h3>
+    <p>Desde el sitio oficial del fabricante.</p>
 
-<section class="card">
-  <h2>Preguntas frecuentes</h2>
+    <h3>¿Los resultados son iguales para todos?</h3>
+    <p>No. Los resultados pueden variar.</p>
 
-  <h3>¿ProstaVive es medicamento?</h3>
-  <p>No. Es un suplemento alimenticio.</p>
-
-  <h3>¿Dónde se compra?</h3>
-  <p>Desde la página oficial del fabricante.</p>
-
-  <h3>¿Los resultados son iguales para todos?</h3>
-  <p>No. Los resultados pueden variar de persona a persona.</p>
-
-  <h3>¿Debo hablar con un médico?</h3>
-  <p>Sí. Consulta con un profesional antes de usar cualquier suplemento, especialmente si tienes condiciones médicas o tomas medicamentos.</p>
+    <h3>¿Debo consultar con un médico?</h3>
+    <p>Sí. Consulta con un profesional de la salud antes de usar cualquier suplemento.</p>
+  </div>
 </section>
 
 </main>
@@ -148,7 +179,7 @@ h1{font-size:36px}
 <footer>
   <p>© Salud en USA</p>
   <p>Este sitio contiene enlaces de afiliado. Podemos recibir una comisión sin costo adicional para usted.</p>
-  <p>La información publicada tiene fines educativos y no sustituye el consejo médico profesional.</p>
+  <p>Contenido informativo. No sustituye el consejo médico profesional.</p>
 </footer>
 
 </body>
